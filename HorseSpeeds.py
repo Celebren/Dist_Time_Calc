@@ -66,3 +66,5 @@ print "\nHorse three-beat gait canter or lope (12mph to 15mph)"
 time_results(usr_distance, horse_canter)
 print "\nHorse gallop (25mph to 30mph)"
 time_results(usr_distance, horse_gallop)
+
+input("") # empty input to prevent terminal from closing after execution when run as script from GUI environment
