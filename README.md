@@ -1,4 +1,4 @@
-# Travel Distance time calculator
+# Travel distance time calculator
 
 A simple script that calculates how long, in hours or minutes, it takes to travel a given distance, on foot or on horse. Written in Python using the NumPy module.
 
