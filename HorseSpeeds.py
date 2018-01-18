@@ -10,6 +10,7 @@ horse_gallop = np.array([25., 30.])  # mph
 while True:
     measurement_system = raw_input("Is the distance in miles or kilometres? ")  # miles/kilometres
     if measurement_system == "miles" \
+            or measurement_system == ""\
             or measurement_system == "km" \
             or measurement_system == "kilometres" \
             or measurement_system == "kilometers":
@@ -67,4 +68,4 @@ time_results(usr_distance, horse_canter)
 print "\nHorse gallop (25mph to 30mph)"
 time_results(usr_distance, horse_gallop)
 
-input("") # empty input to prevent terminal from closing after execution when run as script from GUI environment
+raw_input("")  # empty input to prevent terminal from closing after execution when run as script from GUI environment
