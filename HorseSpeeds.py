@@ -8,7 +8,7 @@ horse_canter = np.array([12., 15.])  # mph three-beat gait
 horse_gallop = np.array([25., 30.])  # mph
 
 while True:
-    measurement_system = raw_input("Is the distance in miles or kilometres? ")  # miles/kilometres
+    measurement_system = input("Is the distance in miles or kilometres? ")  # miles/kilometres
     if measurement_system == "miles" \
             or measurement_system == ""\
             or measurement_system == "km" \
@@ -16,17 +16,17 @@ while True:
             or measurement_system == "kilometers":
         break
     else:
-        print "Incorrect input. Please try again"
+        print("Incorrect input. Please try again")
         continue
 
 while True:
     try:
         usr_distance = float(input("What distance are you travelling?       "))
         if usr_distance <= 0:
-            print "Please enter a value that is greater than zero"
+            print("Please enter a value that is greater than zero")
             continue
     except NameError:
-        print "Incorrect input. Please enter a distance value (integer or float)"
+        print("Incorrect input. Please enter a distance value (integer or float)")
     else:
         break
 
@@ -50,22 +50,22 @@ def time_results(distance, speeds):
     # slice long floats
     if floats_as_strings_array.shape == (2,):
         first_string, second_string = floats_as_strings_array[0], floats_as_strings_array[1]
-        print first_string[:4] + str_array[0] + " to " + second_string[:4] + str_array[1]
+        print(first_string[:4] + str_array[0] + " to " + second_string[:4] + str_array[1])
 
     else:  # horse_walk.shape is (1,)
         first_string = floats_as_strings_array[0]
-        print first_string[:4] + str_array[0]
+        print(first_string[:4] + str_array[0])
 
 
-print "\nHuman walk (at 3.1mph to 5.6mph)"
+print("\nHuman walk (at 3.1mph to 5.6mph)")
 time_results(usr_distance, human_walk)
-print "\nHorse four-beat to (4mph)"
+print("\nHorse four-beat to (4mph)")
 time_results(usr_distance, horse_walk)
-print "\nHorse two-beat gait jog (8.1mph to 12mph)"
+print("\nHorse two-beat gait jog (8.1mph to 12mph)")
 time_results(usr_distance, horse_jog)
-print "\nHorse three-beat gait canter or lope (12mph to 15mph)"
+print("\nHorse three-beat gait canter or lope (12mph to 15mph)")
 time_results(usr_distance, horse_canter)
-print "\nHorse gallop (25mph to 30mph)"
+print("\nHorse gallop (25mph to 30mph)")
 time_results(usr_distance, horse_gallop)
 
-raw_input("")  # empty input to prevent terminal from closing after execution when run as script from GUI environment
+input("")  # empty input to prevent terminal from closing after execution when run as script from GUI environment
